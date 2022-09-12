@@ -1,0 +1,10 @@
+-std=c++17
+-Wall
+-Wextra
+-pedantic
+-Weffc++
+-Wsign-conversion
+-Iinclude
+-Llib
+-I/home/razorr/Work/CCPP/google_benchmark/include
+-L/home/razorr/Work/CCPP/google_benchmark/build/src
