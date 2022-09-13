@@ -1,6 +1,6 @@
 #include "commands.hpp"
 #include "filetools.hpp"
-#include "process.hpp"
+#include "processtools.hpp"
 #include "stringtools.hpp"
 #include "misctools.hpp"
 
@@ -83,15 +83,13 @@ bool GetPackages(const std::string &fileName, stringMap_t &packsMap,
   return true;
 }
 
-using mapIteratorPair_t =
-  std::pair<stringMap_t::const_iterator, stringMap_t::const_iterator>;
 void InstallDefault(const std::string &pack, const stringMap_t &packsMap)
 {
   const std::string &install_cmd{ InstallCommand(pack) + " " };
   std::string output;
-  mapIteratorPair_t range = packsMap.equal_range("default");
+  const mapIteratorPair_t range = packsMap.equal_range("default");
   std::for_each(range.first, range.second,
-	   [&install_cmd, &output](stringMap_t::value_type &x) {
+	   [install_cmd, &output](const stringMap_t::value_type &x) {
 	     UPT::CommandRunWrite(install_cmd + x.second, output);
 	   });
   // std::vector<mapIteratorPair_t> ranges(2, mapIteratorPair_t());
@@ -113,7 +111,7 @@ void InstallPip(const stringMap_t &packsMap)
   std::string output;
   mapIteratorPair_t range = packsMap.equal_range("pip");
   std::for_each(range.first, range.second,
-	   [&install_cmd, &output](stringMap_t::value_type &x) {
+	   [&install_cmd, &output](const stringMap_t::value_type &x) {
 	     UPT::CommandRunWrite(install_cmd + x.second, output);
 	   });
 }
@@ -123,7 +121,7 @@ void InstallScripts(const stringMap_t &packsMap)
   std::string output;
   mapIteratorPair_t range = packsMap.equal_range("script");
   std::for_each(range.first, range.second,
-	   [&output](stringMap_t::value_type &x) {
+	   [&output](const stringMap_t::value_type &x) {
 	       UPT::CommandRunWrite(UMT::GetCleanPath(x.second), output);
 	   });
 }
@@ -134,7 +132,7 @@ void InstallAUR(const stringMap_t &packsMap)
   std::string output;
   mapIteratorPair_t range = packsMap.equal_range("aur");
   std::for_each(range.first, range.second,
-	   [&install_cmd, &output](stringMap_t::value_type &x) {
+	   [&install_cmd, &output](const stringMap_t::value_type &x) {
 	     UPT::CommandRunWrite(install_cmd + x.second, output);
 	   });
 }
@@ -145,7 +143,7 @@ void InstallCustom(const std::string &pack, const std::string &name, const strin
   std::string output;
   mapIteratorPair_t range = packsMap.equal_range(name);
   std::for_each(range.first, range.second,
-	   [&install_cmd, &output](stringMap_t::value_type &x) {
+	   [&install_cmd, &output](const stringMap_t::value_type &x) {
 	     UPT::CommandRunWrite(install_cmd + x.second, output);
 	   });
 }

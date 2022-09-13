@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/razorr/Work/CCPP/apps_installer/build",
+  "command": "/usr/bin/c++  -I/home/razorr/Work/CCPP/apps_installer/include -std=gnu++17 -o CMakeFiles/commands.dir/src/commands.cxx.o -c /home/razorr/Work/CCPP/apps_installer/src/commands.cxx",
+  "file": "/home/razorr/Work/CCPP/apps_installer/src/commands.cxx"
+},
+{
+  "directory": "/home/razorr/Work/CCPP/apps_installer/build",
+  "command": "/usr/bin/c++  -I/home/razorr/Work/CCPP/apps_installer/include -std=gnu++17 -o CMakeFiles/arguments.dir/src/arguments.cxx.o -c /home/razorr/Work/CCPP/apps_installer/src/arguments.cxx",
+  "file": "/home/razorr/Work/CCPP/apps_installer/src/arguments.cxx"
+},
+{
+  "directory": "/home/razorr/Work/CCPP/apps_installer/build",
+  "command": "/usr/bin/c++  -I/home/razorr/Work/CCPP/apps_installer/include -std=gnu++17 -o CMakeFiles/processtools.dir/src/processtools.cxx.o -c /home/razorr/Work/CCPP/apps_installer/src/processtools.cxx",
+  "file": "/home/razorr/Work/CCPP/apps_installer/src/processtools.cxx"
+},
+{
+  "directory": "/home/razorr/Work/CCPP/apps_installer/build",
+  "command": "/usr/bin/c++  -I/home/razorr/Work/CCPP/apps_installer/include -std=gnu++17 -o CMakeFiles/misctools.dir/src/misctools.cxx.o -c /home/razorr/Work/CCPP/apps_installer/src/misctools.cxx",
+  "file": "/home/razorr/Work/CCPP/apps_installer/src/misctools.cxx"
+},
+{
+  "directory": "/home/razorr/Work/CCPP/apps_installer/build",
+  "command": "/usr/bin/c++  -I/home/razorr/Work/CCPP/apps_installer/include -std=gnu++17 -o CMakeFiles/filetools.dir/src/filetools.cxx.o -c /home/razorr/Work/CCPP/apps_installer/src/filetools.cxx",
+  "file": "/home/razorr/Work/CCPP/apps_installer/src/filetools.cxx"
+},
+{
+  "directory": "/home/razorr/Work/CCPP/apps_installer/build",
+  "command": "/usr/bin/c++  -I/home/razorr/Work/CCPP/apps_installer/include -std=gnu++17 -o CMakeFiles/stringtools.dir/src/stringtools.cxx.o -c /home/razorr/Work/CCPP/apps_installer/src/stringtools.cxx",
+  "file": "/home/razorr/Work/CCPP/apps_installer/src/stringtools.cxx"
+},
+{
+  "directory": "/home/razorr/Work/CCPP/apps_installer/build",
+  "command": "/usr/bin/c++  -I/home/razorr/Work/CCPP/apps_installer/include -std=gnu++17 -o CMakeFiles/apps_installer.dir/src/main.cpp.o -c /home/razorr/Work/CCPP/apps_installer/src/main.cpp",
+  "file": "/home/razorr/Work/CCPP/apps_installer/src/main.cpp"
+}
+]
