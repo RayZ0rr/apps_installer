@@ -32,9 +32,9 @@ target_link_libraries(apps_installer PRIVATE
 		      stringtools
 		      )
 
-target_include_directories(apps_installer PUBLIC
-			  "${PROJECT_SOURCE_DIR}/include"
-                           )
+# target_include_directories(apps_installer PUBLIC
+# 			  "${PROJECT_SOURCE_DIR}/include"
+#                            )
 
 install(TARGETS apps_installer DESTINATION "${PROJECT_SOURCE_DIR}/bin")
 
